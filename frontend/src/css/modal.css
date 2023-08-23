@@ -1,0 +1,31 @@
+*{
+margin : 0;
+padding : 0;
+box-sizing:border-box;
+}
+
+.container {
+    margin: 5rem;
+}
+
+.modal-wrapper{
+    position:fixed;
+    left: 0;
+    right:0;
+    bottom:0;
+    top:0;
+    background-color: rgba(189,189,189,0.9);
+}
+
+.modal-container{
+  position: fixed;
+  top: 50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background-color: white;
+  max-width: 30rem;
+  padding: 10rem 10rem;
+  border-radius:0.5rem;
+  margin-top: 40px;
+  width: 100%;
+}
