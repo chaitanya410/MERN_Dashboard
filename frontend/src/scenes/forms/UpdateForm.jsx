@@ -8,9 +8,13 @@ import { useState } from "react";
 import axios from "axios"
 import { baseURL } from "../../utils/constant";
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 const UpdateForm = () => {
+    
+
+
     const isNonMobile = useMediaQuery("(min-width:600px)");
     const location = useLocation();
     const { data } = location.state;
@@ -20,14 +24,20 @@ const UpdateForm = () => {
     const [Address, setAddress] = useState(data.Address);
     const [access, setAccess] = useState(data.access);
    
+    const navigate = useNavigate();
+
+    
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        
         const formData = { Name, Email,  Phone,  Address, access };
 
         try {
-            const response = axios.put(`${baseURL}/update/:id${data._id}`, formData);
+            // const response = axios.put(`${baseURL}/update/:id${data._id}`, formData);
+            const response = await axios.put(`${baseURL}/update/${data._id}`, formData);
+
 
             if (response.ok) {
                 console.log('User data Updated');
@@ -37,6 +47,13 @@ const UpdateForm = () => {
         } catch (error) {
             console.error('Error Updating user data:', error.response);
         }
+        alert("User Updated Successfully !")
+        setName(" ")
+        setEmail(" ")
+        setAddress(" ")
+        setAccess(" ")
+        setPhone(" ")
+        navigate("/team")
     };
 
     return (
