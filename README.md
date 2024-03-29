@@ -1,4 +1,4 @@
-# Demo1_dashboard The Dashboard Project is a web application developed with React.js, MUI (Material-UI) for the frontend,
+# MERN DASHBOARD The Dashboard Project is a web application developed with React.js, MUI (Material-UI) for the frontend,
 Axios for handling HTTP requests, and Node.js with MongoDB as the backend. It provides a versatile dashboard for managing and performing CRUD (Create, Read, Update, Delete) operations on various data sets.
 This project aims to offer a user-friendly and visually appealing interface for managing data efficiently.
 
